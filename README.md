@@ -1,0 +1,1 @@
+Tracking rural housing schemes like Garib Awas Yojana often lacks an integrated management system. This project aims to develop a Management Information System (MIS) for rural housing schemes, incorporating GIS lications to improve tracking, monitoring, and allocation of housing projects for better implementation and transparency.
