@@ -18,3 +18,8 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/officers/create', [\App\Http\Controllers\Admin\OfficerController::class, 'create'])->name('officers.create');
+    Route::post('/officers', [\App\Http\Controllers\Admin\OfficerController::class, 'store'])->name('officers.store');
+});
