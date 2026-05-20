@@ -18,14 +18,17 @@ class ProfileUpdateRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
-            'email' => [
-                'required',
-                'string',
-                'lowercase',
-                'email',
-                'max:255',
-                Rule::unique(User::class)->ignore($this->user()->id),
-            ],
+            'phone' => ['nullable', 'string', 'max:20'],
+            'aadhaar_number' => ['nullable', 'string', 'size:12'],
+            'address_1' => ['nullable', 'string', 'max:255'],
+            'address_2' => ['nullable', 'string', 'max:255'],
+            'city' => ['nullable', 'string', 'max:100'],
+            'pin_code' => ['nullable', 'string', 'max:10'],
+            'district' => ['nullable', 'string', 'max:100'],
+            'state' => ['nullable', 'string', 'max:100'],
+            'bank_account_number' => ['nullable', 'string', 'max:50'],
+            'bank_ifsc_code' => ['nullable', 'string', 'max:20'],
+            'bank_branch' => ['nullable', 'string', 'max:100'],
         ];
     }
 }

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="GIS-enabled Management Information System for rural housing schemes — track, monitor, and allocate housing projects with transparency.">
 
-        <title>{{ $title ?? config('app.name', 'Rural Housing MIS') }}</title>
+        <title>{{ $title ?? config('app.name', 'RuralNest MIS') }}</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
                         </svg>
                     </span>
                     <div class="leading-tight">
-                        <p class="text-sm font-bold text-white">{{ config('app.name', 'Rural Housing MIS') }}</p>
+                        <p class="text-sm font-bold text-white">{{ config('app.name', 'RuralNest MIS') }}</p>
                         <p class="text-xs text-emerald-200/80">GIS-enabled scheme management</p>
                     </div>
                 </a>
@@ -61,7 +61,7 @@
             <div class="mx-auto max-w-7xl px-5 py-12 sm:px-8">
                 <div class="grid gap-10 md:grid-cols-3">
                     <div class="md:col-span-2">
-                        <p class="text-lg font-semibold text-white">{{ config('app.name', 'Rural Housing MIS') }}</p>
+                        <p class="text-lg font-semibold text-white">{{ config('app.name', 'RuralNest MIS') }}</p>
                         <p class="mt-3 max-w-lg text-sm leading-relaxed">
                             A Management Information System for rural housing programmes, integrating GIS to strengthen tracking, monitoring, allocation, and public accountability.
                         </p>
@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <div class="mt-10 border-t border-slate-800 pt-6 text-center text-xs">
-                    &copy; {{ date('Y') }} {{ config('app.name', 'Rural Housing MIS') }}. All rights reserved.
+                    &copy; {{ date('Y') }} {{ config('app.name', 'RuralNest MIS') }}. All rights reserved.
                 </div>
             </div>
         </footer>

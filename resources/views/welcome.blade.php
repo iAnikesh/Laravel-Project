@@ -1,4 +1,4 @@
-<x-landing-layout :title="config('app.name', 'Rural Housing MIS') . ' — Rural Housing Scheme Management'">
+<x-landing-layout :title="config('app.name', 'RuralNest MIS') . ' — Rural Housing Scheme Management'">
     {{-- Hero --}}
     <section class="relative overflow-hidden bg-gradient-to-br from-slate-950 via-emerald-950 to-slate-900 pt-28 pb-20 sm:pt-36 sm:pb-28">
         <div class="pointer-events-none absolute inset-0 opacity-40" aria-hidden="true">

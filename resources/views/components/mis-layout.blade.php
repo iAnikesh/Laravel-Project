@@ -1,6 +1,6 @@
 @props(['title' => null])
 @php
-    $pageTitle = $title ?? ($header ?? config('app.name', 'Rural Housing MIS'));
+    $pageTitle = $title ?? ($header ?? config('app.name', 'RuralNest MIS'));
 @endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
