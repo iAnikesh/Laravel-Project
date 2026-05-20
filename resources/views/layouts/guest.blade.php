@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Government Portal') }}</title>
+        <title>{{ config('app.name', 'Rural Housing MIS') }}</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,10 +30,10 @@
                             </svg>
                         </div>
                         <h1 class="mt-8 text-3xl font-bold tracking-tight text-white xl:text-4xl">
-                            {{ config('app.name', 'Government Portal') }}
+                            {{ config('app.name', 'Rural Housing MIS') }}
                         </h1>
                         <p class="mt-3 max-w-sm text-base leading-relaxed text-blue-100/90">
-                            Secure, streamlined access to citizen services — register once and manage your account with confidence.
+                            GIS-enabled management for rural housing schemes — register, track, and monitor housing programmes with transparency.
                         </p>
                     </div>
 
@@ -70,7 +70,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                             </svg>
                         </div>
-                        <p class="mt-3 text-sm font-medium text-slate-500">{{ config('app.name', 'Government Portal') }}</p>
+                        <p class="mt-3 text-sm font-medium text-slate-500">{{ config('app.name', 'Rural Housing MIS') }}</p>
                     </div>
 
                     <div @class([
@@ -83,7 +83,7 @@
                 </div>
 
                 <footer class="px-5 pb-6 text-center text-xs text-slate-400 sm:px-10">
-                    &copy; {{ date('Y') }} {{ config('app.name', 'Government Portal') }}. All rights reserved.
+                    &copy; {{ date('Y') }} {{ config('app.name', 'Rural Housing MIS') }}. All rights reserved.
                 </footer>
             </main>
         </div>

@@ -1,70 +1,47 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Create Officer') }}
-        </h2>
-    </x-slot>
+<x-mis-layout>
+    <x-slot name="header">Create field officer</x-slot>
+    <x-slot name="subheader">Add a new officer account with review permissions</x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
+    <div class="mx-auto max-w-xl">
+        <form method="POST" action="{{ route('admin.officers.store') }}" class="mis-card relative overflow-hidden">
+            <!-- Decorative gradient orb -->
+            <div class="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-emerald-400/20 blur-[60px] pointer-events-none"></div>
+            
+            <div class="mis-card-body space-y-6 relative z-10">
+                @csrf
 
-                    @if (session('status'))
-                        <div class="mb-4 font-medium text-sm text-green-600">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                <div class="space-y-1">
+                    <label for="name" class="mis-label">Full Name</label>
+                    <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus autocomplete="name" class="mis-input" placeholder="e.g. John Doe">
+                    <x-input-error :messages="$errors->get('name')" class="mis-error" />
+                </div>
 
-                    <form method="POST" action="{{ route('admin.officers.store') }}">
-                        @csrf
+                <div class="space-y-1">
+                    <label for="email" class="mis-label">Email Address</label>
+                    <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="username" class="mis-input" placeholder="officer@example.com">
+                    <x-input-error :messages="$errors->get('email')" class="mis-error" />
+                </div>
 
-                        <!-- Name -->
-                        <div>
-                            <x-input-label for="name" :value="__('Name')" />
-                            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-                            <x-input-error :messages="$errors->get('name')" class="mt-2" />
-                        </div>
+                <div class="space-y-1">
+                    <label for="password" class="mis-label">Password</label>
+                    <input id="password" type="password" name="password" required autocomplete="new-password" class="mis-input" placeholder="••••••••">
+                    <x-input-error :messages="$errors->get('password')" class="mis-error" />
+                </div>
 
-                        <!-- Email Address -->
-                        <div class="mt-4">
-                            <x-input-label for="email" :value="__('Email')" />
-                            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-                        </div>
+                <div class="space-y-1">
+                    <label for="password_confirmation" class="mis-label">Confirm Password</label>
+                    <input id="password_confirmation" type="password" name="password_confirmation" required autocomplete="new-password" class="mis-input" placeholder="••••••••">
+                    <x-input-error :messages="$errors->get('password_confirmation')" class="mis-error" />
+                </div>
 
-                        <!-- Password -->
-                        <div class="mt-4">
-                            <x-input-label for="password" :value="__('Password')" />
-
-                            <x-text-input id="password" class="block mt-1 w-full"
-                                            type="password"
-                                            name="password"
-                                            required autocomplete="new-password" />
-
-                            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-                        </div>
-
-                        <!-- Confirm Password -->
-                        <div class="mt-4">
-                            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                                            type="password"
-                                            name="password_confirmation" required autocomplete="new-password" />
-
-                            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-                        </div>
-
-                        <div class="flex items-center justify-end mt-4">
-                            <x-primary-button class="ms-4">
-                                {{ __('Create Officer') }}
-                            </x-primary-button>
-                        </div>
-                    </form>
-
+                <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/40 mt-6">
+                    <button type="submit" class="mis-btn-primary">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        Create officer
+                    </button>
+                    <a href="{{ route('admin.officers.index') }}" class="mis-btn-secondary">Cancel</a>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
-</x-app-layout>
+</x-mis-layout>
